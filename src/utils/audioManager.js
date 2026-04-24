@@ -1,8 +1,8 @@
 import birthdaySong from "../assets/Happy Birthday Song 🎂🎈 Celebrate with Music & Cake.mp3";
 import memorySong from "../assets/Full Song Woh Din Film Version  Chhichhore  Sushant,Shraddha  Pritam  Amitabh  Tushar Joshi.mp3";
 
-// Add your second song import here when available:
-// import memorySong from "../assets/your-memory-song.mp3";
+// Clean old comments from audioManager
+
 
 class AudioManager {
   constructor() {

@@ -14,7 +14,7 @@ class AudioManager {
     if (!src) return;
     if (!this.tracks[name]) {
       const audio = new Audio(src);
-      audio.loop = true;
+      audio.loop = false;
       audio.volume = 0.5;
       this.tracks[name] = audio;
     }

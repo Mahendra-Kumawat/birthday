@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import confetti from "canvas-confetti";
 import audioManager from "../utils/audioManager";
 
+import HackerTerminal from "./HackerTerminal";
 import { Step0Invitation } from "./Step0Invitation";
 import { Step1Greeting } from "./Step1Greeting";
 import { Step2Cake } from "./Step2Cake";
@@ -70,6 +71,7 @@ const Countdown = ({ onComplete }) => {
 
 export default function BirthdayGreeting() {
   const navigate = useNavigate();
+  const [showTerminal, setShowTerminal] = useState(true);
   const [step, setStep] = useState(0);
   const [showCountdown, setShowCountdown] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -139,6 +141,11 @@ export default function BirthdayGreeting() {
       }, 250);
     }
   }, [step]);
+
+  // If terminal is still showing, render it full-screen
+  if (showTerminal) {
+    return <HackerTerminal onSuccess={() => setShowTerminal(false)} />;
+  }
 
   return (
     <div className="min-h-screen bg-neutral-950 text-white font-sans overflow-hidden flex items-center justify-center relative selection:bg-pink-500/30">

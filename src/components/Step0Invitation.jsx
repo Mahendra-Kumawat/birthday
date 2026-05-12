@@ -33,7 +33,7 @@ export const Step0Invitation = ({ nextStep }) => (
 
 
     <div className="flex items-center justify-center gap-2">
-      <h2 className="text-3xl md:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-r from-pink-400 via-purple-400 to-indigo-400 mb-6 drop-shadow-lg p-2">
+      <h2 className="text-3xl text-center md:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-r from-pink-400 via-purple-400 to-indigo-400 mb-6 drop-shadow-lg p-2">
         Hi Captain
       </h2>
     </div>
@@ -159,7 +159,7 @@ export const Step0Invitation = ({ nextStep }) => (
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1, duration: 1 }}
-      className="mt-10 flex flex-col items-center gap-3"
+      className="mt-10 flex flex-col items-center gap-3 text-center"
     >
       <p className="text-neutral-300 text-base md:text-lg tracking-widest uppercase font-medium flex items-center gap-2">
         <SparkleIcon className="w-4 h-4 text-pink-400" />

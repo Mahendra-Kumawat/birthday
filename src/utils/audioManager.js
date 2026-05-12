@@ -3,7 +3,6 @@ import memorySong from "../assets/Full Song Woh Din Film Version  Chhichhore  Su
 
 // Clean old comments from audioManager
 
-
 class AudioManager {
   constructor() {
     this.tracks = {};
@@ -14,8 +13,8 @@ class AudioManager {
     if (!src) return;
     if (!this.tracks[name]) {
       const audio = new Audio(src);
-      audio.loop = false;
-      audio.volume = 0.5;
+      audio.loop = true;
+      audio.volume = 1;
       this.tracks[name] = audio;
     }
   }

@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from "motion/react";
 import { SparkleIcon, containerVariants } from "./SharedElements";
 
 const funnyJokes = [
-  "उम्र बढ़ रही है तेरी, पर अक्ल अभी भी वही है! 😂",
-  "Happy Birthday! अब तू officially बूढ़ी हो गई 🤣",
-  "केक खा ले, डाइट कल से... फिर कभी नहीं! 🍰",
-  "तेरी उम्र का केक बनाते तो candles से आग लग जाती! 🔥",
+  "केक काट जल्दी! तेरी diet plan तो वैसे भी 1 जनवरी से शुरू होती है… हर साल 😂🍰",
+  "Birthday है तेरा पर gift मैं लाया… apni priceless दोस्ती! 🎁 (सस्ता पड़ा 😜)",
+  "तू एक साल और बड़ी हो गई, पर selfie filter तो वही रहेगा ना! 📸🤣",
+  "जन्मदिन मुबारक! आज खा-पी ले मस्ती से… कल से फिर 'मैं मोटी हो रही हूँ' शुरू 😭😂",
+  "तेरे बिना life boring होती… झूठ बोला, पर birthday पे allowed है! 😏❤️",
+  "एक और साल गुज़रा तुझे झेलते हुए… refund kab milega? 🧾😂",
 ];
 
 const CakeSlice = ({ side, isCakeCut }) => {
@@ -152,7 +154,7 @@ export const Step2Cake = ({ nextStep, isCakeCut, setIsCakeCut }) => {
           🎂 केक का टाइम! 🎂
         </motion.h3>
         <p className="text-neutral-400 text-sm mb-6">
-          Make a wish & cut the cake!
+          मन में wish सोच और केक काट! ✨
         </p>
 
         {/* Rotating Jokes */}
@@ -199,7 +201,7 @@ export const Step2Cake = ({ nextStep, isCakeCut, setIsCakeCut }) => {
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
                 <span className="relative z-10 flex items-center gap-2 text-lg">
-                  🔪 केक काटो!
+                  🔪 मन में wish सोच और केक काट! ✨
                 </span>
               </motion.button>
             ) : (
@@ -218,7 +220,8 @@ export const Step2Cake = ({ nextStep, isCakeCut, setIsCakeCut }) => {
                   बहुत खूब! परफेक्ट slice! 🍰✨
                 </motion.p>
                 <p className="text-neutral-400 text-sm italic">
-                 केक संभाल के रखना… मैं दोस्त कम, certified cake chor ज्यादा हूँ 😈🎂
+                  केक संभाल के रखना… मैं दोस्त कम, certified cake chor ज्यादा
+                  हूँ 😈🎂
                 </p>
                 <button
                   onClick={nextStep}

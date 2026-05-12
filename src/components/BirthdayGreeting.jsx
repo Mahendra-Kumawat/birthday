@@ -161,10 +161,18 @@ export default function BirthdayGreeting() {
       </div>
 
       <AnimatePresence mode="wait">
-        {step === 0 && !showCountdown && <Step0Invitation nextStep={handleGiftTap} />}
+        {step === 0 && !showCountdown && (
+          <Step0Invitation nextStep={handleGiftTap} />
+        )}
         {showCountdown && <Countdown onComplete={handleCountdownComplete} />}
         {step === 1 && !showCountdown && <Step1Greeting nextStep={nextStep} />}
-        {step === 2 && <Step2Cake nextStep={nextStep} isCakeCut={isCakeCut} setIsCakeCut={setIsCakeCut} />}
+        {step === 2 && (
+          <Step2Cake
+            nextStep={nextStep}
+            isCakeCut={isCakeCut}
+            setIsCakeCut={setIsCakeCut}
+          />
+        )}
         {step === 3 && <Step3Teaser nextStep={nextStep} />}
         {step === 4 && <Step4Finale setStep={setStep} navigate={navigate} />}
       </AnimatePresence>

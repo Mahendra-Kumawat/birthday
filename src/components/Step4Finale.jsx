@@ -58,8 +58,11 @@ export const Step4Finale = ({ setStep, navigate }) => (
         </div>
 
         <p className="text-xl md:text-2xl text-neutral-200 font-light leading-relaxed mb-8 relative z-10">
-          🎂 **<span className="font-bold text-transparent bg-clip-text bg-linear-to-r from-pink-400 via-purple-400 to-indigo-400 mb-6 drop-shadow-lg p-2">Happy Birthday</span>मेरी सबसे प्यारी और इज्ज़तदार… पर थोड़ी शरारती
-          मित्र** 😄
+          🎂 **
+          <span className="font-bold text-transparent bg-clip-text bg-linear-to-r from-pink-400 via-purple-400 to-indigo-400 mb-6 drop-shadow-lg p-2">
+            Happy Birthday
+          </span>
+          मेरी सबसे प्यारी और इज्ज़तदार… पर थोड़ी शरारती मित्र** 😄
         </p>
         <p className="text-xl md:text-2xl text-neutral-200 font-light leading-relaxed mb-8 relative z-10">
           आज वो शुभ दिन है जब दुनिया को एक ऐसी दोस्त मिली, जो हँसते-हँसाते life
@@ -76,9 +79,14 @@ export const Step4Finale = ({ setStep, navigate }) => (
           extra piece ले सकता हूँ 🎂😄 और gift? महँगा gift नहीं लाया… पर हाँ,
           lifetime free roasting और unlimited friendship already included है 😂
           दुआ है — तेरे सारे सपने पूरे हों, खुशियाँ double हों, stress zero हो,
-          और हमारी friendship lifetime warranty के साथ चले ❤️ **Happy Birthday
-          Bestie!** आज celebration भी होगा, laughter bhi होगा, और पुरानी यादों
-          की rewind भी 😄🎉
+          और हमारी friendship lifetime warranty के साथ चले ❤️
+          <br />
+          <span className="font-bold text-transparent bg-clip-text bg-linear-to-r from-pink-400 via-purple-400 to-indigo-400 mb-6 drop-shadow-lg p-2">
+            **Happy Birthday Bestie!**
+          </span>
+          <br />
+          आज celebration भी होगा, laughter bhi होगा, और पुरानी यादों की rewind
+          भी 😄🎉
         </p>
 
         <div className="flex items-center justify-center gap-2 text-pink-400 font-medium tracking-widest uppercase text-sm mt-8">

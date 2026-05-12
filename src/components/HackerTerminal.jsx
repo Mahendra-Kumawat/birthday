@@ -1,15 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import warningSound from "../assets/warning_sound.mp3";
-import keystrokeSound from "../assets/key_stroke_sound.mp3";
-
-// Play a keystroke click sound
-const playKeystroke = () => {
-  const audio = new Audio(keystrokeSound);
-  audio.volume = 0.3 + Math.random() * 0.2;
-  audio.playbackRate = 0.9 + Math.random() * 0.2;
-  audio.play().catch(() => {});
-};
 
 // ─── Web Audio API: hacking terminal ambience ──────────────────────────────
 function createHackingAmbience() {
@@ -368,9 +359,12 @@ export default function HackerTerminal({ onSuccess }) {
     }
   }, [currentLine]);
 
-  // Start first line
+  const hasStartedRef = useRef(false);
+
+  // Start first line (guarded against StrictMode double-mount)
   useEffect(() => {
-    if (lines.length === 0) {
+    if (!hasStartedRef.current) {
+      hasStartedRef.current = true;
       setLines([HACK_LINES[0].text]);
     }
   }, []);
@@ -496,10 +490,7 @@ export default function HackerTerminal({ onSuccess }) {
                         ref={inputRef}
                         type="password"
                         value={passwordValue}
-                        onChange={(e) => {
-                          setPasswordValue(e.target.value);
-                          playKeystroke();
-                        }}
+                        onChange={(e) => setPasswordValue(e.target.value)}
                         className="flex-1 bg-transparent border-none outline-none caret-green-400 text-green-300 font-mono text-xs md:text-sm"
                         style={{ caretColor: "#4ade80" }}
                         autoComplete="off"
